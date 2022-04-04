@@ -1164,7 +1164,8 @@ svg.jodit-icon {
   min-width: 34px;
   height: 34px;
 }
-.jodit-ui-button:hover:not([disabled]) {
+.jodit-ui-button:hover:not([disabled]),
+.jodit-ui-button:focus-visible:not([disabled]) {
   background-color: var(--jd-color-button-background-hover);
   opacity: 1;
   outline: 0;
@@ -2700,7 +2701,8 @@ svg.jodit-icon {
   border-radius: var(--jd-border-radius-default);
   color: var(--jd-color-text-icons);
 }
-.jodit-toolbar-button__button:hover:not([disabled]) {
+.jodit-toolbar-button__button:hover:not([disabled]),
+.jodit-toolbar-button__button:focus-visible:not([disabled]) {
   background-color: var(--jd-color-button-background-hover);
   opacity: 1;
   outline: 0;
@@ -2727,7 +2729,8 @@ svg.jodit-icon {
   cursor: pointer;
   width: 14px;
 }
-.jodit-toolbar-button__trigger:hover:not([disabled]) {
+.jodit-toolbar-button__trigger:hover:not([disabled]),
+.jodit-toolbar-button__trigger:focus-visible:not([disabled]) {
   background-color: var(--jd-color-button-background-hover);
   opacity: 1;
   outline: 0;
@@ -2808,7 +2811,8 @@ svg.jodit-icon {
   padding: 0;
   border: 1px solid transparent;
 }
-.jodit-toolbar-content:hover:not([disabled]) {
+.jodit-toolbar-content:hover:not([disabled]),
+.jodit-toolbar-content:focus-visible:not([disabled]) {
   background-color: var(--jd-color-button-background-hover);
   opacity: 1;
   outline: 0;

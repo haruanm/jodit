@@ -8717,6 +8717,7 @@ class Popup extends ui/* UIElement */.u1 {
         }
         else {
             elm = content;
+            elm.tabIndex = 1;
         }
         box.appendChild(elm);
         this.container.appendChild(box);

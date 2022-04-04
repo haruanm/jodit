@@ -13670,6 +13670,7 @@ var Popup = (function (_super) {
         }
         else {
             elm = content;
+            elm.tabIndex = 1;
         }
         box.appendChild(elm);
         this.container.appendChild(box);
