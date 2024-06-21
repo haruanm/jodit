@@ -368,7 +368,11 @@ export class ToolbarButton<T extends IViewBased = IViewBased>
 						.setContent(
 							isString(elm) ? this.j.c.fromHTML(elm) : elm
 						)
-						.open(() => position(this.container));
+						.open(
+							() => position(this.container),
+							false,
+							this.container
+						);
 				}
 			}
 
@@ -450,7 +454,11 @@ export class ToolbarButton<T extends IViewBased = IViewBased>
 			this.target
 		);
 
-		menu.setContent(toolbar.container).open(() => position(this.container));
+		menu.setContent(toolbar.container).open(
+			() => position(this.container),
+			false,
+			this.container
+		);
 
 		this.state.activated = true;
 	}
@@ -473,6 +481,7 @@ export class ToolbarButton<T extends IViewBased = IViewBased>
 
 	private openPopup(): IPopup {
 		this.closePopup();
+		this.j?.e?.fire('closeAllPopups afterExec');
 		this.openedPopup = new Popup(this.j, false);
 		this.j.e
 			.on(this.ow, 'mousedown touchstart', this.onOutsideClick)
